@@ -9,7 +9,7 @@ CXX_PATH = r"c:\Users\GPN\AppData\Local\Programs\avr8-gnu-toolchain-3.7.0.1796-w
 
 env = Environment(tools=["mingw"])
 env.Replace(CXX="avr-g++")
-env.Replace(CXXFLAGS="-Wall -g -Os -mmcu="+ DEVICE)
+env.Replace(CXXFLAGS="-Wall -Werror -g -flto -Os -mmcu="+ DEVICE)
 env.Replace(CPPDEFPREFIX="")
 env.Replace(PROGSUFFIX="")
 env["SIZE"] = "avr-size"
