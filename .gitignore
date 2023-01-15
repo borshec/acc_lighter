@@ -1,3 +1,5 @@
 *.o
 *.dblite
 *.exe
+*.elf
+*.hex
