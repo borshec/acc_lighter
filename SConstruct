@@ -28,4 +28,3 @@ env.Command(TARGET + '.hex', TARGET + '.elf', env['OBJCOPY'] + ' -O ihex $SOURCE
 
 # Compute memory usage.
 env.Command(None, TARGET + '.elf', env['SIZE'] + ' -C --mcu=' + DEVICE + ' $SOURCE')
-env.Command(None, None, 'ctags -R -f src/.tags src')
